@@ -61,7 +61,10 @@ export default function HomePage() {
         margin: "0 auto",
       }}
     >
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12} md={3} sx={{display: {
+        xs: "none",
+        md: "block"
+      }}}>
         <Experience />
       </Grid>
       <Grid
@@ -72,7 +75,14 @@ export default function HomePage() {
           textAlign: "center",
           padding: "20px",
           borderRadius: 2,
-          minHeight: "500px",
+          height: {
+            xs: "100vh",
+            md: "500px"
+          },
+          marginTop: {
+            xs: "100px",
+            md: "auto"
+          }
         }}
       >
         <Box
@@ -82,7 +92,10 @@ export default function HomePage() {
             alignItems: "center",
           }}
         >
-          <Box>
+          <Box sx={{display: {
+            xs: "none",
+            md: "block"
+          }}}>
             <Image
               src="/images.jpg"
               alt="Next.js Logo"
@@ -94,13 +107,19 @@ export default function HomePage() {
           <Box>
             <Typography
               variant="h4"
-              sx={{ textAlign: "left", marginLeft: 3, fontWeight: 700 }}
+              sx={{ textAlign: {
+                xs: "center",
+                md: "left"
+              }, marginLeft: 3, fontWeight: 700 }}
             >
               FRONT END DEVELOPER
             </Typography>
             <Typography
               variant="body1"
-              sx={{ marginLeft: 3, textAlign: "left" }}
+              sx={{ marginLeft: 3, textAlign: {
+                xs: "center",
+                md: "left"
+              } }}
             >{`I'm Jick Lampago`}</Typography>
           </Box>
         </Box>
@@ -108,7 +127,7 @@ export default function HomePage() {
             Main tools
           </Typography> */}
         <Box
-          sx={{ textAlign: "center", width: "90%", margin: "0 auto", mt: 4 }}
+          sx={{ textAlign: "center", width: {xs:"70%", md: "90%"}, margin: {xs:"0 auto 0 63px", md: "0 auto"}, mt: 4 }}
         >
           <Grid
             container
