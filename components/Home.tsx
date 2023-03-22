@@ -4,6 +4,7 @@ import { Box, display } from "@mui/system";
 import Image from "next/image";
 import Tooltip from "@mui/material/Tooltip";
 import Experience from "./experience";
+import Projects from "./projects";
 
 const images = [
   {
@@ -51,6 +52,7 @@ export default function HomePage() {
       alignItems="center"
       spacing={2}
       sx={{
+    
         height: "90vh",
         width: {
           md: "80%",
@@ -59,7 +61,7 @@ export default function HomePage() {
         margin: "0 auto",
       }}
     >
-      <Grid item xs={12} md={2}>
+      <Grid item xs={12} md={3}>
         <Experience />
       </Grid>
       <Grid
@@ -136,7 +138,7 @@ export default function HomePage() {
         </Box>
       </Grid>
       <Grid item xs={12} md={2}>
-        2
+        <Projects />
       </Grid>
     </Grid>
   );
